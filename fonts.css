@@ -1,47 +1,40 @@
-/* ใช้ไฟล์จริงจากโฟลเดอร์ ./fonts ที่แนบมาแล้ว */
-/* แนะนำ: เก็บชื่อ family ให้สั้น ไม่มีช่องว่าง เพื่อเรียกใช้ง่าย */
-
+/* Subset: Thai + Latin (Basic + Latin-1) + common punctuation; WOFF2 only */
 @font-face {
   font-family: 'DCPText';
-  src: url('./fonts/DCPText-Regular.woff2') format('woff2'),
-       url('./fonts/DCPText-Regular.woff') format('woff');
+  src: url('./fonts/DCPText-Regular-thai-latin.woff2') format('woff2');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
-  /* unicode-range: U+0000-00FF, U+0E00-0E7F;  // Latin + Thai */
+  unicode-range: U+0000-007F, U+00A0-00FF, U+0E00-0E7F, U+2013, U+2014, U+2018, U+2019, U+201C, U+201D, U+2022, U+2026, U+00AD;
 }
 
 @font-face {
   font-family: 'DCPText';
-  src: url('./fonts/DCPText-Bold.woff2') format('woff2'),
-       url('./fonts/DCPText-Bold.woff') format('woff');
+  src: url('./fonts/DCPText-Bold-thai-latin.woff2') format('woff2');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
-  /* unicode-range: U+0000-00FF, U+0E00-0E7F; */
+  unicode-range: U+0000-007F, U+00A0-00FF, U+0E00-0E7F, U+2013, U+2014, U+2018, U+2019, U+201C, U+201D, U+2022, U+2026, U+00AD;
 }
 
 @font-face {
   font-family: 'DCPDusitCentralPark';
-  src: url('./fonts/DCPDusitCentralPark-Regular.woff2') format('woff2'),
-       url('./fonts/DCPDusitCentralPark-Regular.woff') format('woff');
+  src: url('./fonts/DCPDusitCentralPark-Regular-thai-latin.woff2') format('woff2');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
-  /* unicode-range: U+0000-00FF, U+0E00-0E7F; */
+  unicode-range: U+0000-007F, U+00A0-00FF, U+0E00-0E7F, U+2013, U+2014, U+2018, U+2019, U+201C, U+201D, U+2022, U+2026, U+00AD;
 }
 
 @font-face {
   font-family: 'DCPDusitCentralPark';
-  src: url('./fonts/DCPDusitCentralPark-Bold.woff2') format('woff2'),
-       url('./fonts/DCPDusitCentralPark-Bold.woff') format('woff');
+  src: url('./fonts/DCPDusitCentralPark-Bold-thai-latin.woff2') format('woff2');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
-  /* unicode-range: U+0000-00FF, U+0E00-0E7F; */
+  unicode-range: U+0000-007F, U+00A0-00FF, U+0E00-0E7F, U+2013, U+2014, U+2018, U+2019, U+201C, U+201D, U+2022, U+2026, U+00AD;
 }
 
-/* ตัวอย่างการตั้งค่าฟอนต์ทั่วทั้งเว็บ */
 :root {
   --font-dcptext: 'DCPText', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans Thai', 'Noto Sans', sans-serif;
   --font-dcpdcp: 'DCPDusitCentralPark', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans Thai', 'Noto Sans', sans-serif;
