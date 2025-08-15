@@ -1,0 +1,50 @@
+/* ใช้ไฟล์จริงจากโฟลเดอร์ ./fonts ที่แนบมาแล้ว */
+/* แนะนำ: เก็บชื่อ family ให้สั้น ไม่มีช่องว่าง เพื่อเรียกใช้ง่าย */
+
+@font-face {
+  font-family: 'DCPText';
+  src: url('./fonts/DCPText-Regular.woff2') format('woff2'),
+       url('./fonts/DCPText-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  /* unicode-range: U+0000-00FF, U+0E00-0E7F;  // Latin + Thai */
+}
+
+@font-face {
+  font-family: 'DCPText';
+  src: url('./fonts/DCPText-Bold.woff2') format('woff2'),
+       url('./fonts/DCPText-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  /* unicode-range: U+0000-00FF, U+0E00-0E7F; */
+}
+
+@font-face {
+  font-family: 'DCPDusitCentralPark';
+  src: url('./fonts/DCPDusitCentralPark-Regular.woff2') format('woff2'),
+       url('./fonts/DCPDusitCentralPark-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  /* unicode-range: U+0000-00FF, U+0E00-0E7F; */
+}
+
+@font-face {
+  font-family: 'DCPDusitCentralPark';
+  src: url('./fonts/DCPDusitCentralPark-Bold.woff2') format('woff2'),
+       url('./fonts/DCPDusitCentralPark-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  /* unicode-range: U+0000-00FF, U+0E00-0E7F; */
+}
+
+/* ตัวอย่างการตั้งค่าฟอนต์ทั่วทั้งเว็บ */
+:root {
+  --font-dcptext: 'DCPText', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans Thai', 'Noto Sans', sans-serif;
+  --font-dcpdcp: 'DCPDusitCentralPark', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans Thai', 'Noto Sans', sans-serif;
+}
+
+body { font-family: var(--font-dcptext); }
